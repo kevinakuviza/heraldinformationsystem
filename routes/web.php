@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/makeorders', 'HomeController@makeorders')->name('makeorders');
+Route::get('/makeorders2', 'HomeController@makeorders2')->name('makeorders2');
+Route::get('/invoice', 'HomeController@invoice')->name('invoice');
+Route::get('/report', 'HomeController@report')->name('report');
